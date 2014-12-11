@@ -11,6 +11,7 @@ TODO
 This example use the incredible [HTTPie](https://github.com/jakubroztocil/httpie) but you can use the http library of your choice.
 
 1. Get your token
+
   ```sh
   http GET http://localhost:8080/login/token.php \
       username==admin \
@@ -18,6 +19,7 @@ This example use the incredible [HTTPie](https://github.com/jakubroztocil/httpie
       service==mem
   ```
 2. Submit your event
+
   ```sh
   http POST http://localhost:8080/webservice/rest/server.php \
       wsfunction==local_mem_post_event \
