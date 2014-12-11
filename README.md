@@ -17,7 +17,7 @@ This example use the incredible [HTTPie](https://github.com/jakubroztocil/httpie
       wsfunction==local_emfm_post_event \
       wstoken==user_token \
       moodlewsrestformat==json \
-      < event.json
+      < docker/event.json
   ```
 
 ## Event format
