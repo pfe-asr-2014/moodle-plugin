@@ -45,7 +45,10 @@ but you can use the http library of your choice.
       wsfunction==local_mem_post_event \
       wstoken==user_token \
       moodlewsrestformat==json \
-      < docker/event.json
+      category=="mooc" \
+      action=="begin" \
+      label=="Relational Database" \
+      datetime=="2014-12-11T16:31:12.436+01:00"
   ```
 
 ## Event format

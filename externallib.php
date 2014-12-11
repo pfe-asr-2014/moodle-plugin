@@ -33,13 +33,12 @@ class local_mem_external extends external_api {
    */
   public static function post_event_parameters() {
     return new external_function_parameters(
-      array('event' => new external_single_structure(
-        array(
-          'category' => new external_value(PARAM_TEXT, 'category of this event (eg. Videos)'),
-          'action' => new external_value(PARAM_TEXT, 'action of this event (eg. Play)'),
-          'label' => new external_value(PARAM_TEXT, 'label of the event (additional information, eg. title of the video)')
-        )
-      ))
+      array(
+        'category' => new external_value(PARAM_TEXT, 'category of this event (eg. Videos)'),
+        'action'   => new external_value(PARAM_TEXT, 'action of this event (eg. Play)'),
+        'label'    => new external_value(PARAM_TEXT, 'label of the event (additional information, eg. title of the video)'),
+        'datetime' => new external_value(PARAM_TEXT, 'date and time of the event in the ISO8601 format (eg. 2014-12-11T16:31:12.436+01:00)')
+      )
     );
   }
 
@@ -55,7 +54,7 @@ class local_mem_external extends external_api {
    * Save an event to the database.
    * @return boolean message saved or not
    */
-  public static function post_event($event) {
+  public static function post_event($category, $action, $label, $datetime) {
     return true;
   }
 }

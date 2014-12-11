@@ -1,7 +1,0 @@
-{
-  "event": {
-    "category": "mooc",
-    "action":   "begin",
-    "label":    "relational database"
-  }
-}
