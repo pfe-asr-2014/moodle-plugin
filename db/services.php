@@ -15,20 +15,20 @@
 */
 
 /**
-* EMFM services definition
+* MEM services definition
 *
 * @author François Monniot
-* @package local_emfm
+* @package local_mem
 * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
 *
 **/
 
 // We defined the web service functions to install.
 $functions = array(
-  'local_emfm_post_event' => array(
-    'classname'   => 'local_emfm_external',
+  'local_mem_post_event' => array(
+    'classname'   => 'local_mem_external',
     'methodname'  => 'post_event',
-    'classpath'   => 'local/emfm/externallib.php',
+    'classpath'   => 'local/mem/externallib.php',
     'description' => 'Save the given event to the database.',
     'type'        => 'write',
   )
@@ -38,10 +38,10 @@ $functions = array(
 $services = array(
   'Mooc Event for Moodle' => array(
     'functions' => array (
-      'local_emfm_post_event'
+      'local_mem_post_event'
     ),
     'restrictedusers' => 0,
     'enabled'         => 1,
-    'shortname'       => 'emfm',
+    'shortname'       => 'mem',
   )
 );

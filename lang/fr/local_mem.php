@@ -15,10 +15,10 @@
 */
 
 /**
-* EMFM related strings
+* MEM related strings
 *
 * @author François Monniot
-* @package local_emfm
+* @package local_mem
 * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
 *
 **/

@@ -1,4 +1,10 @@
-# EMFM aka Event Mooc For Moodle
+# MEM aka MOOC Event for Moodle
+
+TODO Write short description
+
+## Installation
+
+TODO
 
 ## Using this plugin
 
@@ -9,12 +15,12 @@ This example use the incredible [HTTPie](https://github.com/jakubroztocil/httpie
   http GET http://localhost:8080/login/token.php \
       username==admin \
       password==moodle-1B \
-      service==emfm
+      service==mem
   ```
 2. Submit your event
   ```sh
   http POST http://localhost:8080/webservice/rest/server.php \
-      wsfunction==local_emfm_post_event \
+      wsfunction==local_mem_post_event \
       wstoken==user_token \
       moodlewsrestformat==json \
       < docker/event.json

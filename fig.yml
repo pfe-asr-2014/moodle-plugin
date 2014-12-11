@@ -5,7 +5,7 @@ moodle:
   links:
     - db
   volumes:
-    - ./emfm:/var/www/html/local/emfm
+    - .:/var/www/html/local/mem
   environment:
     MOODLE_URL: http://localhost:8080
 db:

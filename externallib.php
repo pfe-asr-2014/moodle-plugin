@@ -15,17 +15,17 @@
 */
 
 /**
-* EMFM external functions
+* MEM external functions
 *
 * @author François Monniot
-* @package local_emfm
+* @package local_mem
 * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
 *
 **/
 
 require_once($CFG->libdir . "/externallib.php");
 
-class local_emfm_external extends external_api {
+class local_mem_external extends external_api {
 
   /**
    * Return description of post_event method parameters.

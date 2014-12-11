@@ -15,10 +15,10 @@
 */
 
 /**
-* EMFM version file
+* MEM version file
 *
 * @author François Monniot
-* @package local_emfm
+* @package local_mem
 * @license http://opensource.org/licenses/gpl-3.0.html GNU Public License
 *
 **/
@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2014121101;  // format YYYYMMDDXX
 $plugin->requires  = 2013051400;  // Requires at least Moodle version 2.5
-$plugin->component = 'local_emfm';
+$plugin->component = 'local_mem';
 $plugin->cron      = 0;
 $plugin->maturity  = MATURITY_ALPHA;
 $plugin->release   = '0.1 (Build: 2014-11-15)';
