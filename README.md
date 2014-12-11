@@ -1,6 +1,6 @@
 # MEM aka MOOC Event for Moodle
 
-TODO Write short description
+Plugin for the moodle platform to collect event from the TSP MOOC Platform.
 
 ## Installation
 
