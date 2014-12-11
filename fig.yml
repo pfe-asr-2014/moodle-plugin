@@ -1,11 +1,11 @@
 moodle:
-  build: .
+  build: docker/
   ports:
     - "8080:80"
   links:
     - db
   volumes:
-    - .:/var/www/html/local
+    - ./emfm:/var/www/html/local/emfm
   environment:
     MOODLE_URL: http://localhost:8080
 db:
