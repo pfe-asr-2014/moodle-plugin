@@ -25,8 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2014112500;  // format YYYYMMDDXX
-$plugin->requires = 2010112400;  // Requires this Moodle version - at least 2.0
-$plugin->cron     = 0;
-$plugin->release   = '0.1 (Build: 2014-11-15)';
+$plugin->version   = 2014121101;  // format YYYYMMDDXX
+$plugin->requires  = 2013051400;  // Requires at least Moodle version 2.5
+$plugin->component = 'local_emfm';
+$plugin->cron      = 0;
 $plugin->maturity  = MATURITY_ALPHA;
+$plugin->release   = '0.1 (Build: 2014-11-15)';

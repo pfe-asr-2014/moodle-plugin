@@ -33,11 +33,15 @@ $functions = array(
     'type'        => 'write',
   )
 );
+
 // We define the services to install as pre-build services. A pre-build service is not editable by administrator.
 $services = array(
   'Mooc Event for Moodle' => array(
-    'functions' => array ('local_emfm_post_event'),
+    'functions' => array (
+      'local_emfm_post_event'
+    ),
     'restrictedusers' => 0,
-    'enabled' => 1,
+    'enabled'         => 1,
+    'shortname'       => 'emfm',
   )
 );

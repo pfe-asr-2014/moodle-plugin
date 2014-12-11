@@ -33,7 +33,13 @@ class local_emfm_external extends external_api {
    */
   public static function post_event_parameters() {
     return new external_function_parameters(
-      array('event' => new external_value(PARAM_TEXT, 'The event to create. There is no default value.') )
+      array('event' => new external_single_structure(
+        array(
+          'category' => new external_value(PARAM_TEXT, 'category of this event (eg. Videos)'),
+          'action' => new external_value(PARAM_TEXT, 'action of this event (eg. Play)'),
+          'label' => new external_value(PARAM_TEXT, 'label of the event (additional information, eg. title of the video)')
+        )
+      ))
     );
   }
 
@@ -50,6 +56,6 @@ class local_emfm_external extends external_api {
    * @return boolean message saved or not
    */
   public static function post_event($event) {
-
+    return true;
   }
 }
