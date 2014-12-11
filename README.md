@@ -1,5 +1,24 @@
 # EMFM aka Event Mooc For Moodle
 
+## Using this plugin
+
+This example use the incredible [HTTPie](https://github.com/jakubroztocil/httpie) but you can use the http library of your choice.
+
+1. Get your token
+  ```sh
+  http GET http://localhost:8080/login/token.php \
+      username==admin \
+      password==moodle-1B \
+      service==emfm
+  ```
+2. Submit your event
+  ```sh
+  http POST http://localhost:8080/webservice/rest/server.php \
+      wsfunction==local_emfm_post_event \
+      wstoken==user_token \
+      moodlewsrestformat==json \
+      < event.json
+  ```
 
 ## Event format
 
