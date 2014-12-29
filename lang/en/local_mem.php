@@ -23,4 +23,5 @@
 *
 **/
 
-$strings['pluginname'] = 'Mooc Event for Moodle';
+$string['pluginname'] = 'Mooc Event for Moodle';
+$string['eventmemeventcreated'] = "MOOC event created.";

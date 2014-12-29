@@ -24,4 +24,5 @@
 **/
 
 // TODO Choose the correct spelling (http://fr.wikipedia.org/wiki/%C3%89v%C3%A9nement#Orthographe)
-$strings['pluginname'] = 'Évènement Mooc pour Moodle';
+$string['pluginname'] = 'Évènement Mooc pour Moodle';
+$string['eventmemeventcreated'] = "Évènement MOOC créé.";

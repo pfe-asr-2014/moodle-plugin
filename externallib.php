@@ -55,6 +55,18 @@ class local_mem_external extends external_api {
    * @return boolean message saved or not
    */
   public static function post_event($category, $action, $label, $datetime) {
+    global $USER;
+    $event = \local_mem\event\mooc_event_created::create(array(
+      'context'=> context_user::instance($USER->id),
+      'other'=>array(
+        'category' => $category,
+        'action'   => $action,
+        'label'    => $label,
+        'datetime' => DateTime::createFromFormat("Y-m-d\TG:i:s\.uP", $datetime)
+      )
+    ));
+
+    $event->trigger();
     return true;
   }
 }

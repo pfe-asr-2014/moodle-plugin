@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2014121107;  // format YYYYMMDDXX
+$plugin->version   = 2014122902;  // format YYYYMMDDXX
 $plugin->requires  = 2013051400;  // Requires at least Moodle version 2.5
 $plugin->component = 'local_mem';
 $plugin->cron      = 0;

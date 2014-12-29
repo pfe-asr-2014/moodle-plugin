@@ -34,7 +34,7 @@ but you can use the http library of your choice.
 
   ```sh
   http GET http://localhost:8080/login/token.php \
-      username==admin \
+      username==test \
       password==moodle-1B \
       service==mem
   ```
@@ -43,7 +43,7 @@ but you can use the http library of your choice.
   ```sh
   http POST http://localhost:8080/webservice/rest/server.php \
       wsfunction==local_mem_post_event \
-      wstoken==user_token \
+      wstoken==<user_token> \
       moodlewsrestformat==json \
       category=="mooc" \
       action=="begin" \
@@ -87,6 +87,18 @@ can be collected for a "courses" category.
 
 This repository provide a Dockerfile and a [fig](http://www.fig.sh) configuration.
 
-You can spin up an environment with the command `fig up`. You'll have to configure
-moodle and install the plugin as explain in the first section of this README
-(beginning at the second point).
+You can spin up an environment with the command `fig up`. You'll have an already configured moodle instance available with the followings users:
+
+* admin/moodle-1B: admin user
+* test/moodle-1B: test user with webservice activated
+
+## Export SQL data from the db container
+
+Before executing the command:
+* Replace `pluginmoodle_db_1` with the db container name (if launch via fig, it is `pluginmoodle_db_1`)
+* Be sure to be in the base directory of this repository
+
+Then execute:
+```sh
+docker exec -it pluginmoodle_db_1 mysqldump -u moodle --password=moodle --databases moodle > dockerfiles/db/moodle.sql
+```
