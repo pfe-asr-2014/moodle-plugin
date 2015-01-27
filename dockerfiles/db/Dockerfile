@@ -1,7 +1,6 @@
 FROM tutum/mysql
 
-ADD moodle-data.sql /moodle-data.sql
-ADD moodle-schema.sql /moodle-schema.sql
+ADD moodle-schema.sql /moodle.sql
 
 ENV STARTUP_SQL='/moodle.sql'
 
